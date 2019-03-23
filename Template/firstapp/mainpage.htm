@@ -1,0 +1,29 @@
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="utf-8">Phát triển ứng dụng Web Python với Django 26/92
+    <title>HOME</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+<body>
+    <div>
+        <img src="{% static 'images/download.jpg' %}" alt="Welcome" width="70%" height="70%"/>
+    </div>
+    <nav class="navbar navbar-default">
+            <div class="container-fluid">   
+              <div class="navbar-header">
+              </div>
+              <ul class="nav navbar-nav">
+                <li><a class="navbar-brand" href="{% url 'mainpage' %}">Trang chủ</a></li>
+                <li><a class="navbar-link" href="{% url 'webpages' %}">Các trang web</a></li>
+                <li><a class="navbar-link" href="{%url 'contents' %}">Các nội dung</a></li>
+                <li><a class="navbar-link" href="{% url 'homepages' %}">Các khóa học</a></li>
+            
+              </ul>
+            </div>
+    </nav>
+    <h2>Chào mừng bạn đến với website Học Web Django</h2>
+    <h3>Nơi bạn có thể xem thông tin về các trang web, nội dung, khóa học</h3>
+</body>
+</html>

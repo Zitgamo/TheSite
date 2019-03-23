@@ -1,0 +1,14 @@
+<h1>Danh sách trang web</h1>
+{% if webpages%}
+<ol>
+    {% for web in webpages %}
+    <li>Tên trang: {{web.name}}</li>
+    <ul>
+        <li>ID: {{web.pk}} </li>
+    <li>Thuộc Topic: {{web.topic}}Name: {{web.name}}</li>
+    <li>URL: {{web.url}}</li>
+    </ul>
+    {% endfor %}
+</ol>
+{% endif %}
+…

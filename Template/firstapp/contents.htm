@@ -1,0 +1,17 @@
+{% load staticfiles %}
+<h1>Danh sách nội dung</h1>
+{% if contents%}
+<ol>
+    {% for content in contents %}
+    <li>Tên : {{content.name}}</li>
+    <ul>
+    <li> ID {{content.pk}} </li>
+    <li>Thuộc nhóm Webpage: {{content.webpage}}</li>
+    <li>Nội dung: {{content.content}}</li>
+    </ul>
+    <p>
+    <img src="{{content.image.url}}" alt="Cannot find this image" />
+    </p>
+    {% endfor %}
+</ol>
+{% endif %}

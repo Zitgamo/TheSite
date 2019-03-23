@@ -1,0 +1,14 @@
+…
+{% load staticfiles %}
+<div class="container">
+{% if course%}
+<h1>{{course.name}}</h1>
+<h3>Nhóm {{course.category}}</h3>
+<p>Học phí: {{course.fee}} vnđ</p>
+<p>Thời lượng: {{course.duration}} giờ</p>
+<p style="color: blue;">Nội dung: {{course.description}}</p>
+<h3 style="color: red;">Chứng chỉ {{course.certificateion}}</h3>
+<div> <img src="{{course.image.url}}" alt="Cannot find this image" class="img-responsive" /> </div>
+{% endif %}
+</div>
+…

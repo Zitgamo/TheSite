@@ -1,0 +1,82 @@
+<!-- probootstrap-bg-white -->
+<section class="probootstrap-section">
+    <div class="container">
+        <div class="row">
+            <div class="probootstrap-cell-retro">
+                <!-- duyet cac phan tu trong course row -->
+                <!-- {% if course_dict %} -->
+                <div class="half">
+                    {% for value in course_dict.course1 %}
+                    <div class="probootstrap-cell probootstrap-animate" data-animate-effect="   ">
+                        <div class="image"
+                            style="background-image: url({{value.image.url}});background-size: 100% 100%;">
+                        </div>
+                        <div class="text text-center">
+                            <h3>{{value.name}}</h3>
+                            <p>{{value.certificateion}}</p>
+                            <p class="price">{{value.fee}} vnđ</p>
+                            <p> <a href="{% url 'first_app:course_detail' value.pk %}" class='btn btn-primary'
+                                    style="float: center;">Xem thêm</a></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="half">
+                        {% for value in course2 %}
+                        <div class="probootstrap-cell probootstrap-animate" data-animate-effect="fadeIn">
+                            <div class="image"
+                                style="background-image: url({{value.image.url}});background-size: 100% 100%;">
+                            </div>
+                            <div class="text text-center">
+                                <h3>{{value.name}}</h3>
+                                <p>{{value.certificateion}}</p>
+                                <p class="price">{{value.fee}} vnđ</p> <a
+                                    href="{% url 'first_app:course_detail' value.pk %}" class='btn btn-primary'
+                                    style="float: center;">Xem thêm</a>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <!-- {% endif %} -->
+                    ...
+                    <section class="probootstrap-section probootstrap-bg-white">
+                        <div class="container">
+                            <!-- {% if courses_cd %} -->
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <ul class="menus">
+                                        {% for value in course3 %}
+                                        <li>
+                                            <figure class="image"><img src="{{value.image.url}}" class="img-fluid"
+                                                    alt="Free Bootstrap Template by ProBootstrap.com"></figure>
+                                            <div class="text">
+                                                <span class="price">{{value.fee}} vnđ</span>
+                                                <h3>{{value.name}}</h3>
+                                                <p>{{value.certificateion}}</p> <a
+                                                    href="{% url 'first_app:course_detail' value.pk %}"
+                                                    class='btn btn-primary' style="float: center;">Xem thêm</a>
+                                            </div>
+                                        </li>
+                                        {% endfor %} </ul>
+                                </div>
+                                <div class="col-md-6">
+                                    <ul class="menus">
+                                        {% for value in course4 %}
+                                        <li>
+                                            <figure class="image"><img src="{{value.image.url}}" class="img-fluid"
+                                                    alt="Free Bootstrap Template by ProBootstrap.com"></figure>
+                                            <div class="text">
+                                                <span class="price">{{value.fee}} vnđ</span>
+                                                <h3>{{value.name}}</h3>
+                                                <p>{{value.certificateion}}</p> <a
+                                                    href="{% url 'first_app:course_detail' value.pk %}"
+                                                    class='btn btn-primary' style="float: center;">Xem thêm</a>
+                                            </div>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- {% endif %} -->
+                        </div>
+                    </section>
+                    ...
